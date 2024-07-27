@@ -9,16 +9,15 @@ class CustomSMTPServer(smtpd.SMTPServer):
         print(f"Receiving message from: {mailfrom}")
         print(f"Sending to: {rcpttos}")
 
-        # 解析電子郵件內容
+        
         msg = Parser().parsestr(data)
         print(f"Subject: {msg['Subject']}")
         print(f"Content-Type: {msg.get_content_type()}")
         print(msg.get_payload())
 
-        # 您可以在這裡實現自定義的電子郵件處理邏輯
-        # 例如,保存電子郵件到文件,或轉發到其他收件人等
+        
 
-        # 返回 '250 OK' 以表示電子郵件已成功接收
+        
         return '250 OK'
 
 print("Starting SMTP server...")
