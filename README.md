@@ -1,4 +1,4 @@
-# stmp server v1.0beta
+# stmp server beta
 ## how to use?
 ### 1. run ```python smtp_server.py```
 ### 2. input the stmp server port
